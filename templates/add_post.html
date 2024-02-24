@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h3>Add Post</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="vtn btn-success">Add</button>
+        <button type="submit" class="vtn btn-danger" formaction="{% url 'dashboard' %}">Cancel</button> 
+    </form>
+
+{% endblock %}

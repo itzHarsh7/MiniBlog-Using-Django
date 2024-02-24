@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    {% for Message in messages%}
+    {{Message}}
+    {% endfor %}
+    <h3>Home Page</h3>
+    {% for i in posts %}
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+        <h1>{{i.title}}</h1>
+        <p>{{i.desc}}</p>
+      </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
